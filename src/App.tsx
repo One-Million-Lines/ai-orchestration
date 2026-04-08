@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { BlueprintProvider, useBlueprint } from "@/hooks/useBlueprintStore";
+import { FloatingNav } from "@/components/FloatingNav";
 import { sections } from "@/data/sections";
 import { ProgressHeader } from "@/components/blueprint/ProgressHeader";
 import { Sidebar } from "@/components/blueprint/Sidebar";
@@ -74,6 +75,7 @@ export default function App() {
     <TooltipProvider delayDuration={200}>
       <BlueprintProvider>
         <BlueprintApp />
+        <FloatingNav position="bottom-right" />
       </BlueprintProvider>
     </TooltipProvider>
   );
